@@ -1,0 +1,10 @@
+<section class="sekcija" fxLayout="row" fxLayoutAlign="space-around" fxLayout.lt-lg="column"  fxLayoutAlign.lt-lg="space-around center">
+    <app-filtriranje (resetovanje)="vracanjeTabele()" (submitovanje)="onSubmit($event)"></app-filtriranje>
+    <section class="tabela" id="al">
+        <mat-tab-group animationDuration="0ms" headerPosition="below" mat-align-tabs="center" [color]="'basic'">
+            <mat-tab label="Putovanja"><app-putovanja class="tabela" ></app-putovanja></mat-tab>
+            <mat-tab label="Mapa"><app-map class="tabela"></app-map></mat-tab>
+        </mat-tab-group>
+    </section>
+</section>
+

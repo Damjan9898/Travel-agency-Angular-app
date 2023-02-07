@@ -1,0 +1,44 @@
+<mat-paginator [pageSize]="5" [pageSizeOptions]="[3 , 5, 10, 15]"></mat-paginator>
+<div class="belaPoz"></div>
+<section>
+ 
+    <mat-table [dataSource]="travelSource" matSort class="tabela">
+      
+      <div matColumnDef="slika" fxFlex="25%">
+        <mat-header-cell *matHeaderCellDef fxFlex="25%"></mat-header-cell>
+        <mat-cell *matCellDef="let element"><img src= '{{ element.slika[0] }}' alt="sea picture"></mat-cell>
+      </div>
+  
+
+      <div matColumnDef="naziv" >
+        <mat-header-cell *matHeaderCellDef fxFlex="48%"></mat-header-cell>
+        <mat-cell *matCellDef="let element" fxLayout="column" fxLayoutAlign="start" fxFlex="48%" class="naziv">
+          <a routerLink="/travel" (click)="elementPick(element.id)"> <span>{{ element.naziv }}</span></a>
+          <p>{{element.opis}}</p>
+        </mat-cell>
+      </div> 
+
+      <div matColumnDef="cena">
+        <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="12%" class="cenaHeader"><mat-icon>sort</mat-icon> Cena</mat-header-cell>
+        <mat-cell *matCellDef="let element" class="bold" fxFlex="12%">{{ element.cena }}&euro;</mat-cell>
+      </div>
+      
+      <div matColumnDef="recenzije" >
+        <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="14%" class="recenzijaHeader"><mat-icon>sort</mat-icon> Recenzija</mat-header-cell>
+        <mat-cell *matCellDef="let element" fxFlex="14%">
+          <span id="brojvezde">{{ average(element.recenzije) }}</span>
+          <!-- <app-rating-input ></app-rating-input> -->
+          <span class="fa fa-star" class='{{ checked(1) }}'></span>
+          <span class="fa fa-star" class='{{ checked(2) }}'></span>
+          <span class="fa fa-star" class='{{ checked(3) }}'></span>
+          <span class="fa fa-star" class='{{ checked(4) }}'></span>
+          <span class="fa fa-star" class='{{ checked(5) }}'></span>
+        </mat-cell>
+      </div>
+    
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let rows; columns: displayedColumns"></mat-row> 
+    </mat-table>
+    
+  </section>

@@ -1,0 +1,63 @@
+.checked {
+    color: orange;
+}
+
+#brojvezde{
+  display:none;
+}
+img{
+  height:150px;
+  width:190px;
+}
+mat-row{
+  height:180px;
+  margin:20px;
+  border:2px solid #f2f2f2;
+  border-radius:5px;
+}
+section{
+  overflow-y: scroll;
+  height:450px;
+}
+.naziv{
+  height:150px;
+  padding-right:30px;
+}
+.naziv span{
+  font-size:22px;
+  font-weight: bold;
+  color: #2196f3;
+}
+.naziv p{
+  padding-top:20px;
+}
+.bold{
+  font-weight: bold;
+}
+.naziv span:hover{
+  color:orange;
+  transition:0.2s;
+}
+mat-header-cell{
+  position:absolute;
+  width:25%;
+  right:0px;
+  color:black;
+}
+.cenaHeader{
+  right:180px;
+}
+.recenzijaHeader{
+  right:30px;
+}
+.belaPoz{
+  width:100%;
+  background-color:white;
+  height:60px;
+  position:absolute;
+}
+@media screen and (max-width:900px){
+  mat-table{
+    width:900px;
+  }
+}

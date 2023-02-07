@@ -1,0 +1,31 @@
+<section>
+  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+  
+
+    <!-- Email / username -->
+   <mat-form-field>
+      <input type="email" matInput placeholder="Email" ngModel name="email" email required #emailInput="ngModel"> 
+      <mat-error *ngIf="emailInput.hasError('required')">Morate da popunite polje</mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">Morate da koristite ispravan format</mat-error> 
+    </mat-form-field>
+
+    <!-- Password -->
+    <mat-form-field hintLabel="Unesite minimum 8 karaktera">
+      <input type="password" matInput placeholder="Lozinka" ngModel lozinka required name="lozinka" #passInput="ngModel" minlength="8"> <!--passInput je promenljiva koja cuva vrednost ove direktive -->
+      <!-- Ispisuje broj unesenih karaktera -->
+      
+      <mat-error *ngIf="passInput.hasError('required')">Morate da popunite polje</mat-error>
+      <mat-error *ngIf="!passInput.hasError('required')">Morate da iskoristite minimum 8 karaktera</mat-error>
+      <mat-hint align="end">{{ passInput.value?.length }} / 8</mat-hint>
+    </mat-form-field>
+
+
+    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid" >Login</button>
+    
+
+    <mat-label *ngIf="errorExists">{{ errorText }}</mat-label>
+    <mat-label  *ngIf="isTravelRouted"> Morate biti ulogovani! </mat-label>
+    <a class="link text-reset" routerLink="/signup" color="warn">Nemate nalog?</a>
+  </form>
+</section>

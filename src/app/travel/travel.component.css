@@ -1,0 +1,176 @@
+section{
+    height:100%;
+    width:1200px;
+    margin:auto;
+}
+h1{
+    font-size:30px;
+}
+.naslov{
+    display:flex;
+    align-items: center;
+    margin-top:40px;
+}
+.naslov p{
+    font-size:20px;
+    margin-left:15px;
+    font-weight: bold;
+}
+.naslov span{
+    color:orange;
+}
+.naslov .recenzije{
+    color:black;
+    font-size:15px;
+}
+.podnaslov{
+    margin-top:5px;
+    display:flex;
+}
+.podnaslov mat-icon{
+    font-size:20px;
+    color: #2196f3;
+}
+.podnaslov p{
+    font-size:17px;
+}
+ngb-carousel{
+    width:600px;
+    
+}
+ngb-carousel img{
+    width:600px;
+}
+.mainInfo{
+    margin-top:15px;
+    width:1200px;
+    margin:auto;
+}
+.text{
+    margin-left:20px;
+}
+.text p{
+   font-size:18px;
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+   margin-top:5px;
+}
+.text .naslovi{
+    color: #3e3e3e;
+    font-weight: bold;
+    font-size:25px;
+    margin-bottom:20px;
+}
+.text ul li{
+    font-size:18px;
+}
+.text ul li mat-icon{
+    font-size:21px;
+    position:relative;
+    top:3px;
+    color: #2196f3;
+}
+.rezervacija{
+    padding-top:50px;
+    width:1000px;
+    margin:auto;
+    
+}
+.podaci{
+    margin-top:20px;
+    background-color: #f2f2f2;
+    padding:20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.datumi mat-icon, .broj mat-icon{
+    position:relative;
+    top:6px;
+}
+h2{
+    text-align: center;
+}
+.th{
+    font-weight: bold;
+}
+.naglasi{
+    font-weight: bold;
+    color:orange;
+    font-size:20px;
+}
+.rez{
+    margin:auto;
+    margin-top:20px;
+    width:150px;
+    height:50px;
+}
+.rez button{
+    width:150px;
+    height:50px;
+    font-size:21px;
+}
+.uslovi{
+    width:1000px;
+    margin:auto;
+    margin-top: 30px;
+    margin-bottom:30px;
+    text-align: center;
+}
+@media screen and (max-width:1279px){
+    section{
+        width:95%;
+    }
+    .mainInfo{
+        width:100%;
+    }
+    .text{
+        margin-top:30px;
+    }
+}
+@media screen and (max-width:1100px){
+
+    .rezervacija{
+        width:700px;
+        
+    }
+    .uslovi{
+        width:100%;
+        font-size:15px;
+    }
+
+}
+@media screen and (max-width:750px){
+    .rezervacija{
+        width:90%;
+        
+    }
+    .podaci{
+        flex-direction:column;
+        
+    }
+    .podaci div{
+        margin:auto;
+        margin-top:20px;
+        text-align: center;
+    }
+    .th{
+        font-size:20px;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+}
+@media screen and (max-width:600px){
+    ngb-carousel{
+        width:100%;
+        
+    }
+    ngb-carousel img{
+        width:100%;
+    }
+}

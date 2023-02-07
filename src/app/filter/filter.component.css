@@ -1,0 +1,44 @@
+.sekcija{
+    width:100%;
+    height:auto;
+    background-color: white;
+    padding-top:30px;
+
+}
+
+.tabela{
+    width:70%;
+}
+app-filtriranje{
+    width:300px;
+    height:430px;
+    padding:20px;
+    background-color:#f9f9f9;
+    border-radius:10px;
+}
+app-putovanja{
+    width:100%;
+
+}
+
+:host ::ng-deep .mat-tab-label{
+    background-color: orange;
+    font-weight: bold;
+    opacity: 0.8;
+    font-size:15px;
+    border-radius: 0px 35px 35px 0px;  
+}
+:host ::ng-deep .mat-tab-label:first-of-type {
+    background-color: #2196f3;
+    border-radius: 35px 0px 0px 35px;
+}
+:host ::ng-deep .mat-tab-label:hover{
+    opacity: 1;
+    transition: 0.3s;
+}
+@media screen and (max-width:900px){
+    .sekcija{
+        height:1200px;
+    
+    }
+  }

@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import '~@angular/material/prebuilt-themes/indigo-pink.css'; */
+
+*{
+    margin:0;
+    padding:0;
+    outline:0;
+    border:none;
+}
+html, body { 
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
+}
+
+mat-sidenav {
+    width: 200px;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none!important;
+}
+
+a:hover, a:active {
+    color: #c7c7c7;
+}
+
+.link{
+    color:#1b56b5;
+}
+.link:hover, .link:active{
+    color:#174185;
+}
+.link1{
+    color:black;
+}
+.link1:hover, .link:active{
+    color:orange;
+}
+.header{
+    width:100%;
+    height:70px;
+    background-color: white;
+    padding-right:10px;
+}
+.header button{
+    font-size:17px;
+} 
+.nav{
+    width:100%;
+}
+.logo{
+    width:180px;
+}

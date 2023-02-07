@@ -1,0 +1,22 @@
+<div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="20px">
+   <section *ngFor="let putovanje of dataSource" >
+                <mat-card id="celo" fxLayout="row" fxLayoutAlign="space-around center">
+                
+                    <p class="naslov"> {{ putovanje.naziv }}, {{ putovanje.grad }}</p>
+                    <div class="informacije"><span>Polazak: </span><p> {{ putovanje.polazak.toDateString() }}</p></div>
+                    <div class="informacije"><span>Povratak: </span><p> {{ putovanje.povratak.toDateString() }}</p></div>
+                    
+                    <div class="informacije ocenjivanje" *ngIf="!putovanje.voted" fxLayoutAlign="center center">
+                        <span>Ocena: </span>
+
+                            <ngb-rating  [max]="5" [(rate)]="putovanje.starRating"></ngb-rating>
+                            <button mat-raised-button color="primary" (click)="ocenjivanje(putovanje.id)">Oceni</button>
+
+                        
+                    </div>
+                    
+                    <p *ngIf="putovanje.voted" class="povratna">Hvala Vam na povratnoj informaciji</p>
+                    </mat-card>
+    </section>
+</div>
+

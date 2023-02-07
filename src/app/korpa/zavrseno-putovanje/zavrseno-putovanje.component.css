@@ -1,0 +1,60 @@
+mat-card{
+    margin: 15px;
+    width: 100%;
+    align-items: center;
+    background:#f9f9f9;
+    padding:20px;
+}
+section{
+    width:65%;
+}
+.naslov{
+    font-size:18px;
+    font-weight: bold;
+}
+ngb-rating{
+    height:30px;
+}
+
+
+
+span{
+    font-weight: bold;
+}
+h1{
+
+    font-size: 32px;
+    margin-top: 10px;
+}
+h2{
+    font-size: 24px;
+}
+mat-card-subtitle{
+    margin-bottom: 5px;
+}
+.narandzasto{
+    color:orange;
+    font-weight: bold;
+}
+img{
+    width: 250px;
+}
+#informacijeCelo{
+    margin-top: 10px;
+}
+
+
+ngb-rating{
+    color:orange;
+    margin-top:7px;
+}
+.ocenjivanje span{
+    margin-right:5px;
+}
+.ocenjivanje button{
+    margin-left:15px;
+}
+.povratna{
+    color:green;
+    font-weight: bold;
+}

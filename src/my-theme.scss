@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+@include mat-core();
+/* 
+https://sass-lang.com/guide 
+https://material.angular.io/guide/theming
+https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+*/
+
+
+$my-theme-primary: mat-palette($mat-blue);
+$my-theme-accent: mat-palette($mat-pink, A400, A100, A400);
+$my-theme-warn: mat-palette($mat-red);
+
+                            
+$my-theme: mat-light-theme( 
+                            $my-theme-primary,    
+                            $my-theme-accent,
+                            $my-theme-warn
+                           );
+
+@include angular-material-theme($my-theme);
+
+

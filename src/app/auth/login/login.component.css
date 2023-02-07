@@ -1,0 +1,21 @@
+
+section{
+    padding-top:50px;
+    height:auto;
+    background-color: white;
+}
+form{
+    margin:auto;
+    padding:30px;
+    height:350px;;
+    width:400px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+}
+mat-form-field{
+    width:320px;
+}
+mat-label{
+    color: red;
+    text-align:center;
+}

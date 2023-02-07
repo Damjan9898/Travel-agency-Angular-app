@@ -1,0 +1,36 @@
+<!-- https://fonts.google.com/icons -->
+
+<!-- https://tburleson-layouts-demos.firebaseapp.com/#/docs -->
+
+<!-- https://github.com/angular/flex-layout/wiki/Responsive-API -->
+
+<section class="background">
+
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper prvaPozadina">
+        <img src="../../../assets/img/grcka.jpg" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Najbolje destinacije u Grčkoj</h3>
+        <p>Naša agencija nudi prelepe destinacije poput Grad prvi, Grad drugi i mnogi drugi</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper drugaPozadina">
+         <img src="../../../assets/img/grcka2.jpg" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Letovanje koje nećete zaboraviti</h3>
+        <p>Naša agencija nudi širok opseg usluga za svaki tip letovanja koji Vam odgovara</p>
+      </div>
+    </ng-template>
+    
+  </ngb-carousel>
+  <div class="pretraga">
+    <a routerLink="/filter"><button mat-raised-button>Pretraži putovanja</button></a>
+  </div>
+</section>
+
+
+

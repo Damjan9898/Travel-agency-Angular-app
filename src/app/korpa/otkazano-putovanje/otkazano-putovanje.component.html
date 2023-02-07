@@ -1,0 +1,22 @@
+<div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+    <section *ngFor="let putovanje of dataSource" >
+                <mat-card  fxLayout="row" fxLayoutAlign="space-around center">     
+                    <h1>OTKAZANO!</h1>          
+                    <p class="naslov"> {{ putovanje.naziv }}, {{ putovanje.grad }} </p>
+                    <div fxLayout="column" fxLayoutAlign="start start">
+                        <div class="informacije"><p><span>Polazak: </span> {{ putovanje.polazak.toDateString() }}</p></div>
+                        <div class="informacije"><p><span>Povratak: </span> {{ putovanje.povratak.toDateString() }}</p></div>
+                    </div>
+
+                    <div id="informacijeCelo" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+                        <div class="informacijeDeo" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+                            <div class="informacije"><span>Cena: </span><p class="narandzasto"> {{ putovanje.cena }} {{putovanje.dodatnaCena}}&euro;</p></div>
+                            <div class="informacije"><span>Vrsta prevoza: </span><p> {{ putovanje.prevoz }}</p></div>
+                            <div class="informacije"><span>Udaljenost: </span><p> {{ putovanje.udaljenost }}</p></div>
+                            <div class="informacije"><span>Broj putnika: </span><p> {{ putovanje.broj }}</p></div>
+                        </div>
+                        
+                    </div>
+                </mat-card>
+    </section>
+</div>

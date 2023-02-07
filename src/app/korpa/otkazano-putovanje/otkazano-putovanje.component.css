@@ -1,0 +1,36 @@
+mat-card{
+    margin: 15px;
+    width: 100%;
+    align-items: center;
+    background:#f9f9f9;
+    padding:20px;
+}
+section{
+    width:95%;
+}
+.naslov{
+    font-size:18px;
+    font-weight: bold;
+}
+
+span{
+    font-weight: bold;
+}
+h1{
+    color:red;
+    font-size: 28px;
+    font-weight: bold;
+}
+h2{
+    font-size: 24px;
+}
+mat-card-subtitle{
+    margin-bottom: 5px;
+}
+.narandzasto{
+    color:orange;
+    font-weight: bold;
+}
+img{
+    width: 250px;
+}

@@ -1,0 +1,41 @@
+<div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px" class="main">
+    <section *ngFor="let putovanje of dataSource" >
+                <mat-card  fxLayout="row" fxLayoutAlign="space-around center">               
+                    <p class="naslov"> {{ putovanje.naziv }}, {{ putovanje.grad }} </p>
+                    <div fxLayout="column" fxLayoutAlign="start start">
+                        <div class="informacije"><p><span>Polazak: </span> {{ putovanje.polazak.toDateString() }}</p></div>
+                        <div class="informacije"><p><span>Povratak: </span> {{ putovanje.povratak.toDateString() }}</p></div>
+                    </div>
+
+                    <div id="informacijeCelo" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+                        <div class="informacijeDeo" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+                            <div class="informacije"><span>Cena: </span><p class="narandzasto"> {{ putovanje.cena }} {{putovanje.dodatnaCena}}&euro;</p></div>
+                            <div class="informacije"><span>Vrsta prevoza: </span><p> {{ putovanje.prevoz }}</p></div>
+                            <div class="informacije"><span>Udaljenost: </span><p> {{ putovanje.udaljenost }}</p></div>
+                            <div class="informacije"><span>Broj putnika: </span><p> {{ putovanje.broj }}</p></div>
+                        </div>
+                        
+                    </div>
+                    <form #f="ngForm" (ngSubmit)="onSubmit(f, putovanje.id)" fxLayout="row" fxLayoutAlign="space-between center">
+                        <mat-form-field >
+                        <mat-label>Dodatne opcije</mat-label>
+                            <mat-select  multiple ngModel name="dodatno" [(ngModel)]="putovanje.dodatno" (ngModelChange)="putovanje.dodatno" (click)="changeDisable()">
+                                
+                                <mat-option (click)="onSubmit(f, putovanje.id)" value="30">Pun pansion (30€)</mat-option>
+                                <mat-option (click)="onSubmit(f, putovanje.id)" value="20">Svakodnevno čišćenje sobe (20€)</mat-option>
+                                <mat-option (click)="onSubmit(f, putovanje.id)" value="10">Svakodnevno menjanje posteljine (10€)</mat-option>
+                        
+                              </mat-select>
+                            </mat-form-field>
+                            
+                    </form>
+                    <button mat-raised-button color="warn" (click)="otkazi(putovanje.id);potpunoBrisanje()">Otkaži putovanje</button>
+                </mat-card>
+    </section>
+    <div fxFlex fxLayout="row" fxLayoutAlign="end end" class="cenaUk">
+        <div id="ukupnaCena"> 
+            <p class="boldovano">Ukupna cena: <span class="narandzasto">{{ prikazCene() }} &euro;</span></p>
+        </div>
+    </div>
+</div>
+

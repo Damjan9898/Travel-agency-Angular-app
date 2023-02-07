@@ -1,0 +1,19 @@
+mat-form-field{
+    height: 70px;
+}
+.jedanRed{
+    width:45%;
+}
+button{
+    width:40%;
+}
+p{
+    font-size:20px;
+    font-weight: bold;
+    color:gray;
+    margin-bottom:10px;
+}
+.filter_alt{
+    position:relative;
+    top:4px;
+}

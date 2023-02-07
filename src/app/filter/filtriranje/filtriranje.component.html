@@ -1,0 +1,90 @@
+<form fxLayout="column" fxLayoutAlign="start" #f="ngForm" (ngSubmit)="onSubmit(f);submitButton.disabled=true" >
+    
+    <p><mat-icon class="filter_alt">filter_alt</mat-icon>Filter</p>
+
+    <mat-form-field >
+  
+        <mat-label>Grad</mat-label>
+  
+        <mat-select ngModel name="gradovi" required >
+  
+          <mat-option *ngFor="let grad of gradoviList" [value]="grad">{{grad}}</mat-option>
+  
+        </mat-select>
+  
+    </mat-form-field>
+  
+    <div fxLayout="row" fxLayoutAlign="space-between">
+      <mat-form-field class="jedanRed">
+    
+        <input matInput ngModel placeholder="Polazak" matInput [matDatepicker]="picker1" name="polazak" required class="dates" >
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1 ></mat-datepicker>
+    
+      </mat-form-field>
+    
+      <mat-form-field class="jedanRed"> 
+    
+        <input matInput ngModel placeholder="Povratak" matInput [matDatepicker]="picker2" name="povratak" required class="dates" >
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2 ></mat-datepicker>
+    
+      </mat-form-field>
+    </div>
+  
+    <mat-form-field>
+  
+      <mat-label>Prevoz</mat-label>
+  
+      <mat-select  ngModel name="prevoz" required >
+  
+        <mat-option *ngFor="let prevoz of prevozList" [value]="prevoz">{{prevoz}}</mat-option>
+  
+      </mat-select>
+  
+  </mat-form-field>
+  <div fxLayout="row" fxLayoutAlign="space-between">
+    <mat-form-field class="jedanRed">
+    
+      <mat-label>Min. cena (&euro;)</mat-label>
+    
+      <input matInput ngModel type="number" name="min" required>
+    
+    </mat-form-field>
+    <mat-form-field class="jedanRed">
+    <mat-label>Max. cena (&euro;)</mat-label>
+    
+      <input matInput ngModel type="number" name="max" required>
+    
+    </mat-form-field>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="space-between">
+    <mat-form-field class="jedanRed">
+  
+        <mat-label>Putnik</mat-label>
+  
+        <mat-select  ngModel name="putnici" required >
+  
+          <mat-option *ngFor="let putnik of putnici" [value]="putnik">{{putnik}}</mat-option>
+  
+        </mat-select>
+  
+    </mat-form-field>
+    <mat-form-field class="jedanRed">
+  
+      <mat-label>Recenzija</mat-label>
+  
+      <mat-select  ngModel name="recenzija" required >
+  
+        <mat-option *ngFor="let recenzija of recenzijaList" [value]="recenzija">{{recenzija}}</mat-option>
+  
+      </mat-select>
+  
+    </mat-form-field>
+  </div>  
+  <div fxLayout="row" fxLayoutAlign="space-between">
+    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid" #submitButton><mat-icon>search</mat-icon></button>
+    <button  type="reset" mat-raised-button color="warn" (click)="vracanjeTabele()">Reset filter</button>
+  </div>
+  </form>
+  

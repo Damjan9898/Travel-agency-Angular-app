@@ -1,0 +1,48 @@
+section{
+    background-color: white;
+    width:100%;
+    height:550px;
+    padding-top:30px;
+    overflow: hidden;
+}
+h1{
+    color: #2196f3;
+    margin-bottom:20px;
+    padding-left:30px;
+}
+h2{
+    color: #2196f3;
+    padding-left:30px;
+    margin-top:20px;
+}
+mat-icon{
+    position: relative;
+    top:5px;
+    color:orange;
+}
+p{
+    font-size:18px;
+    padding-left:30px;
+    padding-top:20px;
+}
+.mapa{
+    width:900px;
+    height:530px;
+    margin-left:35px;
+    position: relative;
+    bottom:40px;
+}
+iframe{
+    width:100%;
+    height:530px;
+}
+.belo{
+    background-color: white;
+    height:50px;
+    width:100%;
+    position:absolute;
+    z-index: +999;
+}
+.opis{
+    width:400px;
+}

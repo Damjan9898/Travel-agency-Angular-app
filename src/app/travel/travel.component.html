@@ -1,0 +1,60 @@
+<section>
+    <div class="naslov">
+        <h1>{{podatak.naziv}} </h1> <p><span class="fa fa-star"></span> {{(average(podatak.recenzije))}} <span class="recenzije">(broj recenzija : {{podatak.recenzije.length}})</span></p>
+    </div>
+    <div class="podnaslov">
+        <mat-icon>location_on</mat-icon><p>{{ podatak.grad }}</p>
+    </div>
+
+    <div class="mainInfo" fxLayout="row" fxLayoutAlign="center center"  fxLayout.lt-lg="column">
+        <ngb-carousel>
+            <ng-template ngbSlide *ngFor="let slika of podatak.slika">
+              <div class="picsum-img-wrapper">
+                <img src='{{slika}}' alt="Apartman photo">
+              </div>
+            </ng-template>
+
+          </ngb-carousel>
+          <div class="text">
+              <p class="naslovi">Šta nudimo</p> 
+              <ul>
+                  <li><mat-icon>wifi</mat-icon> {{podatak.internet}}</li>
+                  <li><mat-icon>pets</mat-icon> {{podatak.ljubimci}}</li>
+                  <li><mat-icon>local_parking</mat-icon> {{podatak.parking}}</li>
+                  <li><mat-icon>ac_unit</mat-icon> {{podatak.klima}}</li>
+              </ul>
+              <p class="naslovi">Opis</p>
+              <p>{{podatak.opis}}</p>
+          </div>
+    </div>
+    <div class="rezervacija">
+        <h2>Rezervacija</h2>
+        <div  class="podaci">
+            <div class="datumi" fxLayout="column">
+                <p class="th">Datumi</p>
+                <p><mat-icon>today</mat-icon> {{podatak.polazak.toDateString()}}</p>
+                <p><mat-icon>today</mat-icon> {{podatak.povratak.toDateString()}}</p>
+            </div>
+            <div class="prevoz">
+                <p class="th">Prevoz</p>
+                <p>{{ podatak.prevoz }}</p>
+            </div>
+            <div class="broj">
+                <p class="th">Broj osoba</p>
+                <p><mat-icon>people</mat-icon> {{ podatak.broj }}</p>
+            </div>
+            <div class="cena">
+                <p class="th">Cena</p>
+                <p class="naglasi">{{ podatak.cena }} &euro;</p>
+            </div>
+           
+        </div>
+        <div class="rez">
+            <button mat-raised-button color="primary" (click)="rezervisi()">Rezerviši</button>
+        </div>
+    </div>
+    <div class="uslovi">
+        <p>*** Ukoliko odlučite da otkažete rezervaciju minimum 14 dana pre datuma polaska vraća Vam se pun iznos uplaćenog novca. U slučaju otkazivanja rezervacije manje od 14 dana pre polaska vraća Vam se samo 50% od ukupne uplaćene sume novca ***</p>
+    </div>
+    
+</section>

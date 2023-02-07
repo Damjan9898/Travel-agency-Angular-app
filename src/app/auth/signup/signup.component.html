@@ -1,0 +1,80 @@
+<section>
+  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+      
+          <!-- NgModel je neophodan za bindovanje vrednosti forme -->
+
+
+    <mat-form-field>
+        <input type="text" matInput placeholder="Ime" ngModel name="ime" ime required #imeInput="ngModel"> 
+        <mat-error *ngIf="imeInput.hasError('required')">Morate da popunite polje</mat-error> 
+    </mat-form-field> 
+
+
+  
+    <mat-form-field>
+        <input type="text" matInput placeholder="Prezime" ngModel name="prezime" prezime required #prezimeInput="ngModel">
+        <mat-error *ngIf="prezimeInput.hasError('required')">Morate da popunite polje</mat-error> 
+    </mat-form-field>
+
+    <mat-form-field>
+        <input type="text" matInput placeholder="Korisničko ime" ngModel name="username" username required #usernameInput="ngModel">
+        <mat-error *ngIf="usernameInput.hasError('required')">Morate da popunite polje</mat-error>
+    </mat-form-field>
+
+            <!-- Password -->
+    <mat-form-field hintLabel="Unesite minimum 8 karaktera">
+      <input type="password" matInput placeholder="Lozinka" ngModel lozinka required name="lozinka" #passInput="ngModel" minlength="8"> <!--passInput je promenljiva koja cuva vrednost ove direktive -->
+      <!-- Ispisuje broj unesenih karaktera -->
+      
+      <mat-error *ngIf="passInput.hasError('required')">Morate da popunite polje</mat-error>
+      <mat-error *ngIf="!passInput.hasError('required')">Morate da iskoristite minimum 8 karaktera</mat-error>
+      <mat-hint align="end">{{ passInput.value?.length }} / 8</mat-hint>
+    </mat-form-field>
+
+    <!-- Email / username -->
+   <mat-form-field>
+      <input type="email" matInput placeholder="Email" ngModel name="email" email required #emailInput="ngModel"> 
+      <mat-error *ngIf="emailInput.hasError('required')">Morate da popunite polje</mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">Morate da koristite ispravan format</mat-error> 
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <input type="tel" matInput placeholder="Telefon" ngModel name="telefon" telefon required #telefonInput="ngModel">
+      <mat-error *ngIf="telefonInput.hasError('required')">Morate da popunite polje</mat-error>
+      <mat-hint align="start">e.g. +38160123456</mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <input type="text" matInput placeholder="Adresa" ngModel name="adresa" adresa required #adresaInput="ngModel">
+      <mat-error *ngIf="adresaInput.hasError('required')">Morate da popunite polje</mat-error>
+    </mat-form-field>
+
+
+  <mat-form-field>
+
+      <mat-label>Izaberite omiljene destinacije</mat-label>
+
+      <mat-select  multiple ngModel name="gradovi" required #gradInput="ngModel">
+
+        <mat-option *ngFor="let grad of gradoviList" [value]="grad">{{grad}}</mat-option>
+
+      </mat-select>
+      <mat-error *ngIf="gradInput.hasError('required')">Izaberite barem jedno polje</mat-error>
+
+  </mat-form-field>
+    
+
+    <mat-checkbox color="primary" ngModel name="acceptance" checkbox required>
+      Pruhvatam sve uslove korišćenja.
+    </mat-checkbox>
+
+    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Signup</button>
+
+    <mat-label *ngIf="errorExists">{{ errorText }}</mat-label>
+    <a class="link" routerLink="">Nazad</a>
+  </form>
+</section>
+
