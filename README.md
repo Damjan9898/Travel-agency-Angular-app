@@ -1,6 +1,6 @@
 # TravelApp
 
-<p>This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2. It's a <strong>personal travel agency web application</strong> built using <em>Angular JS</em>. It's a showcase of my skills in modern web development, integrating technologies like <em>Angular JS</em> and <em>TypeScript</em>.
+<p>This project was generated with Angular CLI version 13.1.2. It's a <strong>personal travel agency web application</strong> built using <em>Angular JS</em>. It's a showcase of my skills in modern web development, integrating technologies like <em>Angular JS</em> and <em>TypeScript</em>.
 
 ## Development server
 
