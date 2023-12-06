@@ -1,10 +1,23 @@
 # TravelApp
 
-<p>This project was generated with Angular CLI version 13.1.2. It's a <strong>personal travel agency web application</strong> built using <em>Angular JS</em>. It's a showcase of my skills in modern web development, integrating technologies like <em>Angular JS</em> and <em>TypeScript</em>.
+<p>This project was generated with Angular CLI version 13.1.2. It's a <strong>Personal travel agency web application</strong> built using <em>Angular JS</em>. It's a showcase of my skills in modern web development, integrating technologies like <em>Angular JS</em> and <em>TypeScript</em>.
 
-## Development server
+## How to Run the Web Application
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+First, you need to install the node modules. Open your terminal, navigate to the main application directory and run this line:
+
+```bash
+npm install
+```
+
+Then you need to run the development server:
+
+```bash
+ng serve
+```
+
+Open [http://localhost:4200](http://localhost:4200) with your browser to see the result.<span><br><br></span>
+
 
 ## Code scaffolding
 
