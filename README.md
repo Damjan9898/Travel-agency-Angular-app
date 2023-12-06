@@ -41,7 +41,7 @@ Open [http://localhost:4200](http://localhost:4200) with your browser to see the
   ![pt_1](https://github.com/Damjan9898/Travel-agency-Angular-app/assets/73915350/b0e439ea-8993-4959-a088-0f51b0ee23a6)
 
 
-<h3>2) Show and Filter Apartments</h3>
+<h3>2) Browse and Filter Apartments</h3>
 
   ![pt_2](https://github.com/Damjan9898/Travel-agency-Angular-app/assets/73915350/48ed75c0-d72a-4888-b1af-1b1d04882ba0)
 
